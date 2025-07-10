@@ -34,8 +34,8 @@ function RulesPage() {
   const onFinish = (values) => {
     if (editingRule) {
       axios
-        //.put(`http://localhost:8000/rules/${editingRule.id}`, values). 
-        .put(`https://datapulse-qusg.onrender.com/rules/${editingRule.id}`, values).
+        //.put(`http://localhost:8000/rules/${editingRule.id}`, values)
+        .put(`https://datapulse-qusg.onrender.com/rules/${editingRule.id}`, values)
         .then(() => {
           message.success('Rule updated');
           setEditingRule(null);
@@ -45,7 +45,7 @@ function RulesPage() {
         .catch(() => message.error('Failed to update rule'));
     } else {
       axios
-        //.post('http://localhost:8000/rules', values)  
+        //.post('http://localhost:8000/rules', values)
         .post('https://datapulse-qusg.onrender.com/rules', values)
         .then(() => {
           message.success('Rule created');
