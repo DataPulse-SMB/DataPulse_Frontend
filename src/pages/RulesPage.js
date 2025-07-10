@@ -121,7 +121,7 @@ function RulesPage() {
         layout="inline"
         onFinish={onFinish}
         style={{ marginBottom: 24 }}
-        key={editingRule ? editingRule.id : 'new'}
+        //key={editingRule ? editingRule.id : 'new'}
       >
         <Form.Item name="user_id">
           <Input placeholder="User ID (optional)" />
