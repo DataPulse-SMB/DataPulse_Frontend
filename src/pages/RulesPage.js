@@ -73,7 +73,8 @@ function RulesPage() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:8000/rules/${id}`)
+      //.delete(`http://localhost:8000/rules/${id}`)
+      .delete(`https://datapulse-qusg.onrender.com/rules/${id}`)
       .then(() => {
         message.success('Rule deleted');
         fetchRules();
